@@ -47,7 +47,9 @@ const Selector = ({ groupByKey, tickets, groupBy, sortBy }) => {
               <button onClick={() => handleGroupingClick("status")}>
                 Status
               </button>
-              <button onClick={() => handleGroupingClick("user")}>User</button>
+              <button onClick={() => handleGroupingClick("userId")}>
+                User
+              </button>
               <button onClick={() => handleGroupingClick("priority")}>
                 Priority
               </button>
