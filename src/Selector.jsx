@@ -4,6 +4,8 @@ const Selector = ({ groupByKey, tickets, groupBy, sortBy }) => {
   const [displayDropdownOpen, setDisplayDropdownOpen] = useState(false);
   const [groupingDropdownOpen, setGroupingDropdownOpen] = useState(false);
   const [orderingDropdownOpen, setOrderingDropdownOpen] = useState(false);
+  const [groupCondition, setGroupCondition] = useState(groupBy);
+  const [sortCondition, setSortCondition] = useState(sortBy);
 
   const toggleDisplayDropdown = () => {
     setDisplayDropdownOpen(!displayDropdownOpen);
@@ -27,12 +29,14 @@ const Selector = ({ groupByKey, tickets, groupBy, sortBy }) => {
   };
 
   const handleGroupingClick = (option) => {
-    groupByKey(tickets, option, sortBy);
+    setGroupCondition(option);
+    groupByKey(tickets, option, sortCondition);
     toggleGroupingDropdown();
   };
 
   const handleOrderingClick = (option) => {
-    groupByKey(tickets, groupBy, option);
+    setSortCondition(option);
+    groupByKey(tickets, groupCondition, option);
     toggleOrderingDropdown();
   };
 
