@@ -6,6 +6,7 @@ const App = () => {
   const API_URL = 'https://api.quicksell.co/v1/internal/frontend-assignment';
 
   const [tickets, setTickets] = useState([]);
+  const [users, setUsers] = useState([])
   const [groupBy, setGroupBy] = useState('status');
   const [groupedTickets, setGroupedTickets] = useState({});
   const [sortBy, setSortBy] = useState('title')
@@ -15,7 +16,9 @@ const App = () => {
       try {
         const response = await fetch(API_URL);
         const data = await response.json();
+        console.log(data);
         setTickets(data.tickets);
+        setUsers(data.users)
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -86,7 +89,7 @@ const App = () => {
         <div key={groupKey}>
           <h2>{groupKey}</h2>
           {groupedTickets[groupKey].map((ticket) => (
-            <Card key={ticket.id} ticket={ticket} />
+            <Card key={ticket.id} ticket={ticket} users={users} />
           ))}
         </div>
       ))}
