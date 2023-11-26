@@ -1,0 +1,107 @@
+.App {
+    background-color: rgba(113, 72, 185, 0.032);;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:98.5%;
+    background-color: #b8aeae; /* Change to your desired background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for depth */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px; /* Adjust padding as needed */
+    z-index: 1000; /* Adjust the z-index as necessary */
+  }
+  
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  font-size: 18px; /* Adjust font size as desired */
+  /* You can add more styles to the brand if needed */
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+    margin-top: 60px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    text-align: center;
+  }
+  
+h2 {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #555555;
+}
+
+.temp-top {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.column {
+  flex: 1;
+  margin: 10px; /* Adjust margin between columns */
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.column-name {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  border-radius: 6px;
+  padding: 10px;
+  margin-top: 10px;
+  background-color:white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h1 {
+  font-size: 15px;
+}
+
+.id-username {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.title-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.priority-status {
+  display: flex;
+  justify-content: space-between;
+}
+  
+  
+  

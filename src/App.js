@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Card from './Card.jsx';
 import Selector from './Selector.jsx'
+import './styles.css'
 
 const App = () => {
   const API_URL = 'https://api.quicksell.co/v1/internal/frontend-assignment';
@@ -67,32 +68,34 @@ const App = () => {
     setGroupedTickets(grouped);
   };
   
-
-  
-
   return (
     <div className="App">
-      {/* <h1>Cards Displayed</h1>
-      {tickets.map((ticket) => (
-        <div key={ticket.id}>
-          <Card ticket={ticket} />
-        </div>
-      ))} */}
 
-      <nav>
-        <Selector tickets = {tickets} groupByKey={groupByKey} groupBy={groupBy} sortBy={sortBy} groupedTickets = {groupedTickets} />
-        Quick Sell Assessment
-      </nav>
-
-      <h1>Cards Displayed after group by {groupBy}</h1>
-      {Object.keys(groupedTickets).map((groupKey) => (
-        <div key={groupKey}>
-          <h2>{groupKey}</h2>
-          {groupedTickets[groupKey].map((ticket) => (
-            <Card key={ticket.id} ticket={ticket} users={users} />
-          ))}
+      <div className='navbar'>
+        <div className="navbar-left">
+          <Selector tickets={tickets} groupByKey={groupByKey} groupBy={groupBy} sortBy={sortBy} groupedTickets={groupedTickets} />
         </div>
-      ))}
+        <div className="navbar-right">
+          <div className="brand">Quick Sell Assessment</div>
+        </div>
+      </div>
+
+      <div className='content-wrapper'>
+        <div className='title'>Kanban Board Application</div>
+
+        <div className='temp-top'>
+            {Object.keys(groupedTickets).map((groupKey) => (
+              <div key={groupKey} className='column'>
+                <h2 className='column-name'>{groupKey}</h2>
+                {groupedTickets[groupKey].map((ticket) => (
+                  <Card key={ticket.id} ticket={ticket} users={users} className="Card" />
+                ))}
+              </div>
+            ))}
+          
+        </div>
+      </div>
+
     </div>
   );
 };
