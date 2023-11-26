@@ -9,23 +9,18 @@ const Selector = ({ groupByKey, tickets, groupBy, sortBy }) => {
 
   const toggleDisplayDropdown = () => {
     setDisplayDropdownOpen(!displayDropdownOpen);
-    if (groupingDropdownOpen) {
-      setGroupingDropdownOpen(false);
-    }
-    if (orderingDropdownOpen) {
-      setOrderingDropdownOpen(false);
-    }
+    setGroupingDropdownOpen(false);
+    setOrderingDropdownOpen(false);
   };
 
   const toggleGroupingDropdown = () => {
     setGroupingDropdownOpen(!groupingDropdownOpen);
-    if (orderingDropdownOpen) {
-      setOrderingDropdownOpen(false);
-    }
+    setOrderingDropdownOpen(false);
   };
 
   const toggleOrderingDropdown = () => {
     setOrderingDropdownOpen(!orderingDropdownOpen);
+    setGroupingDropdownOpen(false);
   };
 
   const handleGroupingClick = (option) => {
@@ -42,35 +37,45 @@ const Selector = ({ groupByKey, tickets, groupBy, sortBy }) => {
 
   return (
     <div className="dropdown">
-      <div onClick={toggleDisplayDropdown}>### Display ###</div>
+      <div className="display-button" onClick={toggleDisplayDropdown}>
+        Display
+      </div>
       {displayDropdownOpen && (
-        <div>
-          <div onClick={toggleGroupingDropdown}>### Grouping ###</div>
-          {groupingDropdownOpen && (
-            <div>
-              <button onClick={() => handleGroupingClick("status")}>
-                Status
-              </button>
-              <button onClick={() => handleGroupingClick("userId")}>
-                User
-              </button>
-              <button onClick={() => handleGroupingClick("priority")}>
-                Priority
-              </button>
+        <div className="dropdown-options">
+          <div className="dropdown-option-wrapper">
+            <div>Grouping</div>
+            <div className="dropdown-item" onClick={toggleGroupingDropdown}>
+              {groupCondition}
+              {groupingDropdownOpen && (
+                <div className="options">
+                  <button onClick={() => handleGroupingClick("status")}>
+                    Status
+                  </button>
+                  <button onClick={() => handleGroupingClick("userId")}>
+                    User
+                  </button>
+                  <button onClick={() => handleGroupingClick("priority")}>
+                    Priority
+                  </button>
+                </div>
+              )}
             </div>
-          )}
-          <div className="dropdown-item" onClick={toggleOrderingDropdown}>
-            ### Ordering ###
-            {orderingDropdownOpen && (
-              <div>
-                <button onClick={() => handleOrderingClick("priority")}>
-                  Priority
-                </button>
-                <button onClick={() => handleOrderingClick("title")}>
-                  Title
-                </button>
-              </div>
-            )}
+          </div>
+          <div className="dropdown-option-wrapper">
+            <div>Ordering</div>
+            <div className="dropdown-item" onClick={toggleOrderingDropdown}>
+              {sortCondition}
+              {orderingDropdownOpen && (
+                <div className="options">
+                  <button onClick={() => handleOrderingClick("priority")}>
+                    Priority
+                  </button>
+                  <button onClick={() => handleOrderingClick("title")}>
+                    Title
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       )}

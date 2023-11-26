@@ -67,6 +67,8 @@ h2 {
 }
 
 .column-name {
+  display: flex;
+  gap: 30px;
   font-size: 20px;
   margin-bottom: 10px;
   color: #333333;
@@ -101,7 +103,46 @@ h2 {
 .priority-status {
   display: flex;
   justify-content: space-between;
+  font-size: 12px;
 }
-  
+
+.display-button {
+  cursor: pointer;
+}
+
+
+
+.dropdown {
+  display: flex;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-options {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.dropdown-item {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid salmon;
+  gap: 20px;
+}
+
+.dropdown-option-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
   
   

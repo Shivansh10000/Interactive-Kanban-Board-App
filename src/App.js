@@ -86,7 +86,10 @@ const App = () => {
         <div className='temp-top'>
             {Object.keys(groupedTickets).map((groupKey) => (
               <div key={groupKey} className='column'>
-                <h2 className='column-name'>{groupKey}</h2>
+                <h2 className='column-name'>
+                  <div>{groupKey} </div>
+                  <div>{groupedTickets[groupKey].length}</div> 
+                </h2>
                 {groupedTickets[groupKey].map((ticket) => (
                   <Card key={ticket.id} ticket={ticket} users={users} className="Card" />
                 ))}
