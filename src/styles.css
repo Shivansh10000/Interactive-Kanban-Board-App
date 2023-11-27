@@ -434,4 +434,14 @@ h2 {
   .green-circle {
     background-color: green;
   }
+
+  .svg-icon {
+    display: none;
+  }
+
+  .temp-top {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
 }

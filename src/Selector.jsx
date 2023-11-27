@@ -52,7 +52,7 @@ const Selector = ({ groupByKey, tickets, groupBy, sortBy }) => {
     <div className="dropdown">
       <div onClick={toggleDisplayDropdown} className="display-button-wrapper">
         <div className="menu-svg" onClick={toggleDisplayDropdown}>
-          <img src={menuSvg} alt="Menu Icon" />
+          <img className="svg-icon" src={menuSvg} alt="Menu Icon" />
         </div>
         <div className="display-button" onClick={toggleDisplayDropdown}>
           Display

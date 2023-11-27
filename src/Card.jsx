@@ -20,11 +20,15 @@ const Card = ({ ticket, users }) => {
 
   const renderPrioritySVG = (priorityValue) => {
     if (priorityValue === 0 || priorityValue === 1) {
-      return <img src={lowPriority} alt="Low Priority" />;
+      return <img className="svg-icon" src={lowPriority} alt="Low Priority" />;
     } else if (priorityValue === 2) {
-      return <img src={mediumPriority} alt="Medium Priority" />;
+      return (
+        <img className="svg-icon" src={mediumPriority} alt="Medium Priority" />
+      );
     } else if (priorityValue === 3 || priorityValue === 4) {
-      return <img src={highPriority} alt="High Priority" />;
+      return (
+        <img className="svg-icon" src={highPriority} alt="High Priority" />
+      );
     }
     return null; // Return null for unknown values
   };
@@ -32,11 +36,11 @@ const Card = ({ ticket, users }) => {
   const renderStatusSVG = (statusValue) => {
     switch (statusValue) {
       case "Backlog":
-        return <img src={backlogSvg} alt="Backlog" />;
+        return <img className="svg-icon" src={backlogSvg} alt="Backlog" />;
       case "Todo":
-        return <img src={todoSvg} alt="Todo" />;
+        return <img className="svg-icon" src={todoSvg} alt="Todo" />;
       case "In progress":
-        return <img src={progressSvg} alt="In Progress" />;
+        return <img className="svg-icon" src={progressSvg} alt="In Progress" />;
       default:
         return null; // Return null for unknown status
     }
