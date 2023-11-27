@@ -108,6 +108,7 @@ h2 {
 
 .display-button {
   cursor: pointer;
+  margin-top: 3px;
 }
 
 
@@ -116,6 +117,7 @@ h2 {
   display: flex;
   position: relative;
   display: inline-block;
+  margin-bottom: 3px;
 }
 
 .dropdown-options {
@@ -127,15 +129,25 @@ h2 {
   background-color: #fff;
   border: 1px solid #ccc;
   padding: 10px;
+  margin-top: 5px;
   border-radius: 4px;
+}
+
+.display-button-wrapper {
+  display: flex;
+  top: 0;
+  gap: 2px;
+  padding: 7px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: whitesmoke;
 }
 
 .dropdown-item {
   cursor: pointer;
-  display: flex;
-  justify-content: space-between;
   border: 1px solid salmon;
-  gap: 20px;
+  display: inline-block;
 }
 
 .dropdown-option-wrapper {
@@ -144,5 +156,22 @@ h2 {
   gap: 20px;
 }
 
-  
+.option-text {
+  display: inline-block;
+}
+
+.downward-dropdown {
+  display: flex;
+
+}
+
+.downward-symbol {
+ /* Adjust margin as needed */
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.menu-svg {
+  cursor: pointer;
+}
   
