@@ -102,13 +102,14 @@ const App = () => {
           <Selector tickets={tickets} groupByKey={groupByKey} groupBy={groupBy} sortBy={sortBy} groupedTickets={groupedTickets} />
         </div>
         <div className="navbar-right">
-          <div className="brand">Quick Sell Assessment</div>
+          <img className="brand" src='https://dwtqm09zovi8z.cloudfront.net/assets/powered_by.png' alt='quick-sell-brand'></img>
         </div>
       </div>
 
       <div className='content-wrapper'>
-        <div className='title'>Kanban Board Application</div>
-
+        <div className='title'>
+          Kanban Board Application
+        </div>
         <div className='temp-top'>
           {Object.keys(groupedTickets).map((groupKey) => (
             <div key={groupKey} className='column'>

@@ -1,5 +1,5 @@
 .App {
-    background-color: rgba(113, 72, 185, 0.032);;
+    background-color: rgba(113, 72, 185, 0.123);
 }
 
 .navbar {
@@ -26,9 +26,9 @@
   align-items: center;
 }
 
+
 .brand {
-  font-size: 18px; /* Adjust font size as desired */
-  /* You can add more styles to the brand if needed */
+  height: 3rem;
 }
 
 .content-wrapper {
@@ -71,6 +71,7 @@ h2 {
   gap: 2rem;
   font-size: 20px;
   margin-bottom: 10px;
+  font-family: 'Roboto Condensed', sans-serif;
   color: #333333;
 }
 
@@ -80,7 +81,7 @@ h2 {
   font-size: 10px;
   border-radius: 6px;
   padding: 10px;
-  margin-top: 10px;
+  margin-top: 15px;
   background-color:white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -102,8 +103,8 @@ h2 {
 
 .priority-status {
   display: flex;
-  justify-content: space-between;
   font-size: 12px;
+  justify-content: space-between;
 }
 
 .display-button {
@@ -169,9 +170,31 @@ h2 {
  /* Adjust margin as needed */
   transform: rotate(90deg);
   cursor: pointer;
+  height: 22px;
 }
 
 .menu-svg {
   cursor: pointer;
 }
+
+/* Your existing styles */
+
+/* Styling for the red and green circles */
+.red-circle,
+.green-circle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%; /* Makes the div a circle */
+  margin-left: 5px; /* Adjust as needed */
+}
+
+.red-circle {
+  background-color: red;
+}
+
+.green-circle {
+  background-color: green;
+}
+
   
