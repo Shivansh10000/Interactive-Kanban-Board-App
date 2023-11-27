@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from './Card.jsx';
 import Selector from './Selector.jsx';
 import './styles.css';
@@ -8,9 +8,9 @@ const App = () => {
 
   const [tickets, setTickets] = useState([]);
   const [users, setUsers] = useState([]);
-  const [groupBy, setGroupBy] = useState('status');
+  const [groupBy, setGroupBy] = useState(() => localStorage.getItem('groupBy') || 'priority');
   const [groupedTickets, setGroupedTickets] = useState({});
-  const [sortBy, setSortBy] = useState('title');
+  const [sortBy, setSortBy] = useState(() => localStorage.getItem('sortBy') || 'title');
 
   const priorityMap = {
     4: 'Urgent',
@@ -38,7 +38,6 @@ const App = () => {
       try {
         const response = await fetch(API_URL);
         const data = await response.json();
-        console.log(data);
         setTickets(data.tickets);
         setUsers(data.users);
       } catch (error) {
@@ -51,11 +50,19 @@ const App = () => {
 
   useEffect(() => {
     if (tickets.length > 0) {
-      setGroupBy(groupBy);
-      setSortBy(sortBy);
       groupByKey(tickets, groupBy, sortBy);
     }
   }, [tickets, groupBy, sortBy]);
+
+  useEffect(() => {
+    localStorage.setItem('groupBy', groupBy);
+    setGroupBy(groupBy);
+  }, [groupBy]);
+
+  useEffect(() => {
+    localStorage.setItem('sortBy', sortBy);
+    setSortBy(sortBy)
+  }, [sortBy]);
 
   const userIdToNameMap = {};
 
@@ -74,7 +81,6 @@ const App = () => {
       grouped[keyValue].push(ticket);
     });
 
-    // Sort each group's array based on sortKey
     for (const groupKey in grouped) {
       const groupTickets = grouped[groupKey];
 
@@ -102,7 +108,7 @@ const App = () => {
           <Selector tickets={tickets} groupByKey={groupByKey} groupBy={groupBy} sortBy={sortBy} groupedTickets={groupedTickets} />
         </div>
         <div className="navbar-right">
-          <img className="brand" src='https://dwtqm09zovi8z.cloudfront.net/assets/powered_by.png' alt='quick-sell-brand'></img>
+          <img className="brand" src='https://dwtqm09zovi8z.cloudfront.net/assets/powered_by.png' alt='quick-sell-brand' />
         </div>
       </div>
 

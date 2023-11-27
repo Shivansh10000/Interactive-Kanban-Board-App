@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import menuSvg from "./svg/menu.svg";
 
 const Selector = ({ groupByKey, tickets, groupBy, sortBy }) => {
   const [displayDropdownOpen, setDisplayDropdownOpen] = useState(false);
   const [groupingDropdownOpen, setGroupingDropdownOpen] = useState(false);
   const [orderingDropdownOpen, setOrderingDropdownOpen] = useState(false);
-  const [groupCondition, setGroupCondition] = useState(groupBy);
-  const [sortCondition, setSortCondition] = useState(sortBy);
+  const [groupCondition, setGroupCondition] = useState(
+    () => localStorage.getItem("groupBy") || groupBy
+  );
+  const [sortCondition, setSortCondition] = useState(
+    () => localStorage.getItem("sortBy") || sortBy
+  );
 
   const toggleDisplayDropdown = () => {
     setDisplayDropdownOpen(!displayDropdownOpen);
@@ -35,6 +39,14 @@ const Selector = ({ groupByKey, tickets, groupBy, sortBy }) => {
     groupByKey(tickets, groupCondition, option);
     toggleOrderingDropdown();
   };
+
+  useEffect(() => {
+    localStorage.setItem("groupBy", groupCondition);
+  }, [groupCondition]);
+
+  useEffect(() => {
+    localStorage.setItem("sortBy", sortCondition);
+  }, [sortCondition]);
 
   return (
     <div className="dropdown">

@@ -59,6 +59,7 @@ const Card = ({ ticket, users }) => {
         <h1>{title}</h1>
         <div className="priority-status">
           {renderPrioritySVG(priority)}
+          <p> {tag[0]} </p>
           <p>{status}</p>
           {renderStatusSVG(status)}
           {/* Assuming tag[0] refers to the first tag */}
