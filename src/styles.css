@@ -219,3 +219,219 @@ h2 {
 .green-circle {
   background-color: green;
 }
+
+@media (max-width: 1000px) {
+  .App {
+    width: 100%;
+  }
+  
+  .navbar {
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for depth */
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 2px 2px; /* Adjust padding as needed */
+      z-index: 1000; /* Adjust the z-index as necessary */
+    }
+    
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .brand {
+    height: 1rem;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  .title {
+      margin-top: 30px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #333333;
+      text-align: center;
+    }
+    
+  h2 {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+  
+  .temp-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .column {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-radius: 3px;
+    padding: 2px;
+  }
+  
+  .column-name {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    flex-direction: column;
+    font-size: 10px;
+    border-radius: 6px;
+    padding: 5px;
+    margin-top: 5px;
+    background-color:white;
+  }
+  
+  .card h1 {
+    font-size: 7.5px;
+  }
+  
+  .id-username {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 6.5px;
+  }
+  
+  .title-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  
+  .priority-status {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 6px;
+    justify-content: space-between;
+  }
+  
+  .display-button {
+    cursor: pointer;
+    margin-top: 3px;
+  }
+  
+  .dropdown {
+    display: flex;
+    position: relative;
+    display: inline-block;
+    flex-wrap: wrap;
+    margin-bottom: 3px;
+  }
+  
+  .dropdown-options {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    left: 0;
+    flex-wrap: wrap;
+    padding: 2px;
+    margin-top: 2px;
+    border-radius: 2px;
+  }
+  
+  .display-button-wrapper {
+    display: flex;
+    top: 0;
+    flex-wrap: wrap;
+    gap: 3px;
+    padding: 2px;
+    border-radius: 2px;
+  }
+  
+  .downward-dropdown {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 30px;
+    padding: 5px;
+  }
+  
+  .dropdown-item {
+    cursor: pointer;
+    background-color: white;
+    display: inline-block;
+  }
+  
+  .dropdown-option-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  .options button {
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid grey;
+  }
+  
+  .option-text {
+    display: inline-block;
+  }
+  
+  .downward-dropdown {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .downward-symbol {
+   /* Adjust margin as needed */
+    transform: rotate(90deg);
+    cursor: pointer;
+    height: 10px;
+  }
+  
+  .menu-svg {
+    cursor: pointer;
+  }
+  
+  /* Your existing styles */
+  
+  /* Styling for the red and green circles */
+  .red-circle,
+  .green-circle {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%; /* Makes the div a circle */
+    margin-left: 2px; /* Adjust as needed */
+  }
+  
+  .red-circle {
+    background-color: red;
+  }
+  
+  .green-circle {
+    background-color: green;
+  }
+}
