@@ -345,10 +345,10 @@ h2 {
     left: 0;
     flex-wrap: wrap;
     padding: 2px;
-    margin-top: 2px;
+    margin-top: 1px;
     border-radius: 2px;
   }
-  
+
   .display-button-wrapper {
     display: flex;
     top: 0;
@@ -362,7 +362,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 30px;
+    width: 80px;
     padding: 5px;
   }
   
@@ -401,8 +401,6 @@ h2 {
   }
   
   .downward-symbol {
-    transform: rotate(90deg);
-    cursor: pointer;
     height: 10px;
   }
   
@@ -417,18 +415,17 @@ h2 {
     border-radius: 50%;
     margin-left: 2px;
   }
-  
-  .red-circle {
-    background-color: red;
-  }
-  
-  .green-circle {
-    background-color: green;
-  }
 
   .svg-icon {
     display: none;
   }
+
+  .dropdown-option-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
 
   .temp-top {
     display: grid;
