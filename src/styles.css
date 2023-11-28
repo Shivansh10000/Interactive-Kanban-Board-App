@@ -9,13 +9,13 @@
     top: 0;
     left: 0;
     width:98.5%;
-    background-color: #34495E; /* Change to your desired background color */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for depth */
+    background-color: #34495E;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 10px; /* Adjust padding as needed */
-    z-index: 1000; /* Adjust the z-index as necessary */
+    padding: 10px 10px;
+    z-index: 1000;
   }
   
 .navbar-left {
@@ -60,7 +60,7 @@ h2 {
 
 .column {
   flex: 1;
-  margin: 10px; /* Adjust margin between columns */
+  margin: 10px;
   display: flex;
   flex-direction: column;
   border-radius: 8px;
@@ -190,7 +190,6 @@ h2 {
 }
 
 .downward-symbol {
- /* Adjust margin as needed */
   transform: rotate(90deg);
   cursor: pointer;
   height: 22px;
@@ -200,16 +199,13 @@ h2 {
   cursor: pointer;
 }
 
-/* Your existing styles */
-
-/* Styling for the red and green circles */
 .red-circle,
 .green-circle {
   display: inline-block;
   width: 10px;
   height: 10px;
-  border-radius: 50%; /* Makes the div a circle */
-  margin-left: 5px; /* Adjust as needed */
+  border-radius: 50%; 
+  margin-left: 5px;
 }
 
 .red-circle {
@@ -226,13 +222,13 @@ h2 {
   }
   
   .navbar {
-      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for depth */
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); 
       display: flex;
       align-items: center;
       flex-wrap: wrap;
       justify-content: space-between;
-      padding: 2px 2px; /* Adjust padding as needed */
-      z-index: 1000; /* Adjust the z-index as necessary */
+      padding: 2px 2px; 
+      z-index: 1000;
     }
     
   .navbar-left {
@@ -405,7 +401,6 @@ h2 {
   }
   
   .downward-symbol {
-   /* Adjust margin as needed */
     transform: rotate(90deg);
     cursor: pointer;
     height: 10px;
@@ -414,17 +409,13 @@ h2 {
   .menu-svg {
     cursor: pointer;
   }
-  
-  /* Your existing styles */
-  
-  /* Styling for the red and green circles */
   .red-circle,
   .green-circle {
     display: inline-block;
     width: 5px;
     height: 5px;
-    border-radius: 50%; /* Makes the div a circle */
-    margin-left: 2px; /* Adjust as needed */
+    border-radius: 50%;
+    margin-left: 2px;
   }
   
   .red-circle {

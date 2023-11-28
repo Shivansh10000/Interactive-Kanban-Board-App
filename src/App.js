@@ -4,14 +4,18 @@ import Selector from './Selector.jsx';
 import './styles.css';
 
 const App = () => {
+  //using the provided api
   const API_URL = 'https://api.quicksell.co/v1/internal/frontend-assignment';
 
   const [tickets, setTickets] = useState([]);
   const [users, setUsers] = useState([]);
+
+  //using local storage to get the item from localstorage if possible
   const [groupBy, setGroupBy] = useState(() => localStorage.getItem('groupBy') || 'priority');
   const [groupedTickets, setGroupedTickets] = useState({});
   const [sortBy, setSortBy] = useState(() => localStorage.getItem('sortBy') || 'title');
 
+  //using a priority map to store the corresponding priority values
   const priorityMap = {
     4: 'Urgent',
     3: 'High',
@@ -70,6 +74,7 @@ const App = () => {
     userIdToNameMap[user.id] = user.name;
   });
 
+  //combines functionality of grouping and sorting and consolidates it in one function
   const groupByKey = (tickets, key, sortKey) => {
     const grouped = {};
 
